@@ -1,0 +1,159 @@
+ body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  padding-top: 90px;
+
+}
+
+header {
+  text-align: center;
+  background-color: #0077b6;
+  padding: 2rem 0;
+  position: relative;
+}
+
+
+header h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 36px;
+  margin: 0;
+}
+
+section {
+  padding: 40px 0;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#features {
+  padding-top: 40px;
+    padding-bottom: 60px;
+  background-color: #f2f2f2;
+}
+
+#features .row {
+  text-align: center;
+        margin-bottom: 30px;
+
+}
+
+#features i {
+  font-size: 48px;
+  color: #0077b6;
+  margin-bottom: 10px;
+}
+
+
+
+ #who-is-it-for {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+
+  #who-is-it-for h2 {
+    margin-bottom: 40px;
+  }
+
+#who-is-it-for .row {
+  text-align: center;
+      margin-bottom: 30px;
+
+}
+  #who-is-it-for h3 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+
+#who-is-it-for i {
+  color: #0077b6;
+  margin-bottom: 1rem;
+    font-size: 48px;
+
+}
+
+#see-it-in-action {
+  background-color: #f2f2f2;
+}
+
+.embed-responsive {
+  margin-bottom: 20px;
+}
+
+#see-it-in-action h2 {
+  margin-bottom: 30px;
+}
+#final-call-to-action {
+ }
+
+#get-started {
+  background-color: #f2f2f2;
+}
+
+.btn {
+  background-color: #0077b6;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+#faq {
+  padding: 40px 0;
+    background-color: #f2f2f2;
+
+}
+
+#faq h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#faq h3 {
+  font-size: 24px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+#faq p {
+  display: none;
+  margin: 0;
+  padding-left: 20px;
+}
+
+#faq .faq-item {
+  position: relative;
+}
+
+#faq .faq-item h3 {
+   display: flex;
+  align-items: center;
+}
+
+#faq .icon-container {
+ margin-right: 10px;
+  color: #0077b6;
+
+}
+
+
+footer {
+  background-color: #0077b6;
+  color: #fff;
+  font-size: 14px;
+  padding: 20px 0;
+  text-align: center;
+}

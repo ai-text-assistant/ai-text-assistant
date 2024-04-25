@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="AI Text Assistant - Enhance your productivity with advanced AI-powered text analysis and summarization.">
+  <meta name="keywords" content="AI Text Assistant, GPT-4, Text Analysis, Summarization, OpenAI, Productivity">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Text Assistant</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F8N1HS8BL6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F8N1HS8BL6');
+ 
+  document.addEventListener("DOMContentLoaded",
+    function() {
+      //faq
+        const faqHeaders = document.querySelectorAll("#faq h3");
+        faqHeaders.forEach((header) => {
+          header.addEventListener("click", function () {
+            const answer = this.nextElementSibling;
+            answer.style.display = answer.style.display === "block" ? "none" : "block";
+          });
+        });
+
+        //youtube lazy load
+        var div, n,
+            v = document.getElementsByClassName("youtube-player");
+        for (n = 0; n < v.length; n++) {
+            div = document.createElement("div");
+            div.setAttribute("data-id", v[n].dataset.id);
+            div.innerHTML = ytThumb(v[n].dataset.id);
+            div.onclick = ytIframe;
+            v[n].appendChild(div);
+        }
+    });
+
+  function ytThumb(id) {
+      var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
+          play = '<div class="play"></div>';
+      return thumb.replace("ID", id) + play;
+  }
+
+  function ytIframe() {
+      var div = document.createElement("div");
+      div.classList.add("embed-responsive", "embed-responsive-16by9");
+
+      var iframe = document.createElement("iframe");
+      var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+      iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+      iframe.setAttribute("frameborder", "0");
+      iframe.setAttribute("allowfullscreen", "1");
+      iframe.classList.add("embed-responsive-item");
+
+      div.appendChild(iframe);
+      this.parentNode.replaceChild(div, this);
+  }
+
+</script>
+
+</head>
+
+<body>
+ 
+  <header>
+
+     <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="chatbot-128.png" width="64" height="64" alt="AI Text Assistant">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#who-is-it-for">Who is it for?</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#see-it-in-action">See It In Action</a>
+            </li>
+             <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="documentation.html">Documentation</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <h1>AI Text Assistant</h1>
+    <p class="text-center text-white">Enhance your productivity with advanced AI-powered text analysis and summarization</p>
+  </header>
+
+<section id="call-to-action">
+    <div class="container">
+      <h2>Transform the Way You Work with Text</h2>
+      <p class="text-center">Unlock the power of AI to analyze and summarize text like never before.</p>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-4">
+            <p class="text-center">
+              <a href="https://chrome.google.com/webstore/detail/ai-text-assistant/pjbbhcgpkmdghjgchgaacafofaolmbep" class="btn btn-primary">Checkout Extension</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+              <p class="text-center">
+                <a href="https://aitextassistant.gumroad.com/l/timesaver" class="btn btn-primary">Just $9.99 for a Limited Time</a>
+              </p>
+            </div>
+             <div class="col-md-2">
+            </div>
+        </div>
+      </div>
+
+      
+
+
+    </div>
+  </section>
+
+  <section id="features">
+    <div class="container">
+      <h2>Key Features</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <i class="fas fa-compress-arrows-alt"></i>
+          <h3>Automatic Text Summarization</h3>
+          <p>Summarize large texts in your preferred language within seconds, saving time and reducing your reading load.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-comments"></i>
+          <h3>Intelligent Comment Generation</h3>
+          <p>Create unique and high-quality comments in your preferred language related to your texts and emotion.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-cogs"></i>
+          <h3>Customizable Settings</h3>
+          <p>Adjust parameters like text length and summary ratio to obtain the most suitable results for your needs.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-brain"></i>
+          <h3>Powered by GPT-4 Technology</h3>
+          <p>Get accurate and meaningful results with the latest AI technology developed by OpenAI.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-key"></i>
+          <h3>Personal API Key Usage</h3>
+          <p>Connect to your OpenAI account and use your private API key for a more personalized experience.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-lock"></i>
+          <h3>Easy and Secure API Key Management</h3>
+          <p>Store your API key securely with encryption and protect your privacy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who is AI Text Assistant for? -->
+<section id="who-is-it-for">
+  <div class="container">
+    <h2>Who is AI Text Assistant for?</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <i class="fas fa-edit"></i>
+        <h3>Content Creators & Writers</h3>
+        <p>Accelerate the writing process and enrich content with summary and comment generation features.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-user-graduate"></i>
+        <h3>Students & Academics</h3>
+        <p>Speed up studying and research by summarizing and analyzing large amounts of text efficiently.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-bullhorn"></i>
+        <h3>Marketers & Communication Pros</h3>
+        <p>Strengthen content marketing strategies and communicate effectively with target audiences using quick text analysis and unique comments.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <i class="fas fa-newspaper"></i>
+        <h3>Journalists & Editors</h3>
+        <p>Speed up news compilation by quickly summarizing news and reports, focusing on more content.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-chart-line"></i>
+        <h3>Business Analysts & Managers</h3>
+        <p>Accelerate decision-making and develop better strategies by benefiting from summaries of business reports and market analyses.</p>
+      </div>
+      <div class="col-md-4">
+        <i class="fas fa-chalkboard-teacher"></i>
+        <h3>Educators & Teachers</h3>
+        <p>Save time evaluating student work and organizing class materials with text summarization and analysis features.</p>
+      </div>
+    </div>
+     
+  </div>
+</section>
+
+
+  <section id="see-it-in-action">
+    <div class="container">
+      <h2>See it in Action</h2>
+
+      <div class="youtube-player text-center" data-id="YzxhE-BchKk"></div>
+      
+    </div>
+  </section>
+
+  <section id="final-call-to-action">
+    <div class="container">
+      <h2>Ready to Boost Your Productivity?</h2>
+      <p class="text-center">Get started with AI Text Assistant today and revolutionize your workflow.</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-4">
+            <p class="text-center">
+              <a href="https://chrome.google.com/webstore/detail/ai-text-assistant/pjbbhcgpkmdghjgchgaacafofaolmbep" class="btn btn-primary">Checkout Extension</a>
+            </p>
+        </div>
+        <div class="col-md-4">
+              <p class="text-center">
+                <a href="https://aitextassistant.gumroad.com/l/timesaver" class="btn btn-primary">Just $9.99 for a Limited Time</a>
+              </p>
+            </div>
+             <div class="col-md-2">
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section id="faq">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+    <div class="row">
+      <div class="col-md-12">
+        <h3><span class="icon-container"><i class="fas fa-question-circle"></i></span>What is Automatic Text Summarization?</h3>
+        <p>Automatic Text Summarization is a feature that allows you to condense large texts into shorter, more manageable versions. AI Text Assistant uses advanced AI algorithms to analyze and extract the most important points from the text, providing you with a concise and coherent summary in seconds.</p>
+      </div>
+      <div class="col-md-12">
+        <h3><span class="icon-container"><i class="fas fa-question-circle"></i></span>How does Intelligent Comment Generation work?</h3>
+        <p>Intelligent Comment Generation is a feature that creates unique and high-quality comments related to your texts. AI Text Assistant's GPT-4 technology processes and understands the context of your text, generating relevant and meaningful comments that can enrich your content and provide additional insights.</p>
+      </div>
+      <div class="col-md-12">
+        <h3><span class="icon-container"><i class="fas fa-question-circle"></i></span>What are the customizable settings in AI Text Assistant?</h3>
+        <p>AI Text Assistant allows you to adjust various settings, such as text length and summary ratio, to obtain the most suitable results for your needs. By customizing these settings, you can fine-tune the output of the AI to better align with your specific requirements and preferences.</p>
+      </div>
+      <div class="col-md-12">
+        <h3><span class="icon-container"><i class="fas fa-question-circle"></i></span>How do I connect my OpenAI account and use my personal API key?</h3>
+        <p>To connect your OpenAI account, you'll need to input your personal API key into AI Text Assistant. Once connected, the application will use your API key to access the OpenAI platform, providing a more personalized and accurate experience. Instructions for obtaining and entering your API key will be provided within the app.</p>
+      </div>
+      <div class="col-md-12">
+        <h3><span class="icon-container"><i class="fas fa-question-circle"></i></span>Is my API key secure in AI Text Assistant?</h3>
+        <p>Yes, your API key is secure when using AI Text Assistant. The application stores your API key with encryption, ensuring that your privacy is protected and your key remains confidential.</p>
+      </div>
+      <div class="col-md-12">
+        <h3><span class="icon-container"><i class="fas fa-question-circle"></i></span>Is trial option available?</h3>
+        <p>Yes, when you install extension you can use some features without need to buy a license for 3 days. After the trial, you can continue to enjoy unlimited access to all features with a one-time fee of $9.99.</p>
+      </div>
+      <div class="col-md-12">
+        <h3><span class="icon-container"><i class="fas fa-question-circle"></i></span>Does AI Text Assistant collect any personal data?</h3>
+        <p>No, AI Text Assistant does not collect any of your private data. Your API key is stored securely with encryption to protect your privacy. However, we recommend that you review OpenAI's privacy policies, as we are not responsible for any personal data they may handle during the use of their services.</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer>
+    <div class="container">
+      <p class="text-center" style="margin-top: 20px;">&copy; 2023 AI Text Assistant. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
+
